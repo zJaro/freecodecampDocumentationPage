@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: minmax(1fr, 1fr) minmax(1fr, 2fr);
+  grid-template-rows: auto 50px;
+  height: 100vh;
+}
+
+nav {
+  grid-area: sidebar;
+  /* width: 100px; */
+}
+aside {
+  position: sticky;
+  top: 1rem;
+  margin: 1rem;
+}
+main {
+  grid-area: main;
+  margin: 1rem;
+}
+
+footer {
+  grid-area: footer;
+}
+
+hr {
+  width: 95%;
+  margin: auto;
+}
+
+.footer-note {
+  width: 80%;
+  margin: auto;
+}
+
+.nav-list {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.section-list {
+  padding-left: 2.5rem;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header:not(.no-top-padding) {
+  padding-top: 2rem;
+}
+
+p {
+  padding: 0.5rem;
+}
